@@ -238,7 +238,7 @@ if not st.session_state.training_in_progress or (st.session_state.training_in_pr
                             st.markdown(f"### {movie['title']}")
                             if movie.get('poster_path'):
                                 poster_url = f"https://image.tmdb.org/t/p/w500{movie['poster_path']}"
-                                st.image(poster_url, use_column_width=True)
+                                st.image(poster_url, use_container_width=True)
                             else:
                                 st.write("No poster available")
                                 
@@ -288,7 +288,7 @@ if not st.session_state.training_in_progress or (st.session_state.training_in_pr
                     st.markdown(f"### {movie['title']}")
                     if movie.get('poster_path'):
                         poster_url = f"https://image.tmdb.org/t/p/w500{movie['poster_path']}"
-                        st.image(poster_url, use_column_width=True)
+                        st.image(poster_url, use_container_width=True)
                     
                     # Display movie details
                     st.markdown(f"**Rating:** {movie.get('vote_average', 'N/A')}/10")
@@ -336,7 +336,7 @@ if not st.session_state.training_in_progress or (st.session_state.training_in_pr
                                     st.markdown(f"### {movie['title']}")
                                     if movie.get('poster_path'):
                                         poster_url = f"https://image.tmdb.org/t/p/w500{movie['poster_path']}"
-                                        st.image(poster_url, use_column_width=True)
+                                        st.image(poster_url, use_container_width=True)
                                     st.markdown(f"**Rating:** {movie.get('vote_average', 'N/A')}/10")
                                     
                                     # Display movie overview in an expander
@@ -421,7 +421,7 @@ if 'selected_movie' in st.session_state and st.session_state.recommender_trained
                         st.markdown(f"### {rec['title']}")
                         if rec.get('poster_path'):
                             poster_url = f"https://image.tmdb.org/t/p/w500{rec['poster_path']}"
-                            st.image(poster_url, use_column_width=True)
+                            st.image(poster_url, use_container_width=True)
                         st.markdown(f"**Rating:** {rec.get('vote_average', 'N/A')}/10")
                         
                         # Display movie overview in an expander
